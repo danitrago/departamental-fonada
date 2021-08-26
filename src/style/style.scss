@@ -1,0 +1,67 @@
+$primary: #144077;
+$success: #87d735;
+$warning: #fcd20c;
+$info: #2283f4;
+$body-bg: $primary;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// CUSTOM
+
+#map-container {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../static/bg-depts/antioquia.jpeg");
+    background-position: center;
+    background-size: cover;
+    // background: linear-gradient(#000000d4, #00000063, #000000d1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(4px);
+    opacity: 0.2;
+  }
+}
+
+#map-depts {
+  max-height: 85vh;
+  // transform: perspective(417px) rotate3d(9, 7, -7, 20deg);
+  // margin-top: -20px;
+  path {
+    cursor: pointer;
+    transition: all ease 0.3s;
+    fill: $info;
+  }
+  path:hover {
+    fill: $warning;
+  }
+}
+
+.rounded-max {
+  border-radius: 999px;
+}
+
+#cont-type-report {
+  opacity: 0.2;
+  transition: all ease 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.presentation-fixed {
+  padding-top: 2rem;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 9999 !important;
+  width: 100%;
+  height: 100%;
+  background-color: $primary;
+}

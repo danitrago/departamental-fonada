@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
+import Layout from "./Layout";
+import Map from "./views/Map";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Map />
+      </Layout>
     </div>
   );
 }
